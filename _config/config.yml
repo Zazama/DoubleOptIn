@@ -1,0 +1,14 @@
+---
+Name: doubleoptinconfig
+---
+SilverStripe\UserForms\Model\Submission\SubmittedForm:
+  extensions:
+    - Zazama\DoubleOptIn\Extensions\SubmittedFormExtension
+
+SilverStripe\UserForms\Model\UserDefinedForm:
+  extensions:
+    - Zazama\DoubleOptIn\Extensions\UserDefinedFormExtension
+
+SilverStripe\UserForms\Control\UserDefinedFormController:
+  extensions:
+    - Zazama\DoubleOptIn\Extensions\UserDefinedFormControllerExtension

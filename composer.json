@@ -1,0 +1,31 @@
+{
+    "name": "zazama/doubleoptin",
+    "description": "A Silverstripe 4 module to implement GDPR required E-Mail double-opt-in.",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "CMS",
+        "email",
+        "double opt in",
+        "gdpr"
+    ],
+    "license": "BSD-3-Clause",
+    "require": {
+        "silverstripe/framework": "^4.0",
+        "silverstripe/admin": "^1.0",
+        "silverstripe/userforms": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zazama\\DoubleOptIn\\": "src/",
+            "Zazama\\DoubleOptIn\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

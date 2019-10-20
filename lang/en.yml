@@ -1,0 +1,11 @@
+en:
+  Zazama\DoubleOptIn\VerificationController:
+    BadToken: 'Your token is invalid. Please try clicking the link again.'
+    AlreadyVerified: 'Your E-Mail address was already verified.'
+    Success: 'You have successfully verified your E-Mail address.'
+  Zazama\DoubleOptIn\Extensions\UserDefinedFormExtension:
+    Enable: 'Enable Double-Opt-In'
+    Field: 'Double-Opt-In E-Mail field'
+    Subject: 'Verification subject'
+  Zazama\DoubleOptIn\Email:
+    ClickLink: 'Click on the following link to verify your E-Mail address:'

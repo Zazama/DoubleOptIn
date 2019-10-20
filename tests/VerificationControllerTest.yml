@@ -1,0 +1,15 @@
+Zazama\DoubleOptIn\Tests\Src\VerificationTestPage:
+  test:
+    Title: Test
+    URLSegment: verify-test
+Zazama\DoubleOptIn\Models\EmailVerification:
+  unverified:
+    EMail: "test@example.com"
+    Token: "asjdkAKHLWHeaslkdjaslkdbalksghd"
+    Verified: false
+    Storage: ''
+  verified:
+    EMail: "test@example.com"
+    Token: "KhaiouwbkaiSGKIGSSdasdasfgg"
+    Verified: true
+    Storage: ''
