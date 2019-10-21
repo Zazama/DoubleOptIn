@@ -78,10 +78,10 @@ class x extends Zazama\DoubleOptIn\Controllers\VerificationController {
   public function updateSuccess($token) {}
 
   # called when verification token is wrong / not provided
-  public function badToken() {}
+  public function updateBadToken() {}
 
   # called when verification token is already verified
-  public function alreadyVerified() {}
+  public function updateAlreadyVerified() {}
 }
 
 class y extends Zazama\DoubleOptIn\Models\EmailVerification {
