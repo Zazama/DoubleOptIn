@@ -24,7 +24,7 @@ class EmailVerification extends DataObject {
     private static $db = [
         'Email' => 'Varchar(255)',
         'Token' => 'Varchar(255)',
-        'Storage' => 'Text',
+        'DBStorage' => 'Text',
         'Verified' => 'Boolean(0)'
     ];
 
@@ -78,8 +78,8 @@ class EmailVerification extends DataObject {
     }
 
     public function getStorage() {
-        if($this->dbObject('Storage')) {
-            return unserialize($this->dbObject('Storage'));
+        if($this->DBStorage) {
+            return json_decode($this->DBStorage, true);
         } else {
             return null;
         }
@@ -87,7 +87,7 @@ class EmailVerification extends DataObject {
 
     public function setStorage($data) {
         if($data) {
-            $this->Storage = serialize($data);
+            $this->DBStorage = json_encode($data);
             return true;
         } else {
             return false;
