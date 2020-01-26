@@ -55,6 +55,13 @@ Zazama\DoubleOptIn\Services\EmailSender:
         $emailVerification->send($subject);
         $emailVerification->write();
     }
+    
+    public function tokenChecks() {
+        EmailVerification::IsSuccess($token); //bool
+        EmailVerification::IsAlreadyVerified($token); //bool
+        EmailVerification::IsBadToken($token); //bool
+        EmailVerification::TokenType($token); //string
+    }
 ```
 
 ### Templates
