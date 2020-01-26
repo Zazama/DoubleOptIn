@@ -45,6 +45,32 @@ class EmailVerification extends DataObject {
         return $this;
     }
 
+    public static function IsSuccess($token) {
+        return (EmailVerification::TokenType($token) == "Success") ? true : false;
+    }
+
+    public static function IsAlreadyVerified($token) {
+        return (EmailVerification::TokenType($token) == "AlreadyVerified") ? true : false;
+    }
+
+    public static function IsBadToken($token) {
+        return (EmailVerification::TokenType($token) == "BadToken") ? true : false;
+    }
+
+    public static function TokenType($token) {
+        if(!$token) {
+            return "BadToken";
+        }
+        $emailVerification = EmailVerification::get()->filter('Token', $token)->limit(1)[0];
+        if(!$emailVerification) {
+            return "BadToken";
+        } else if($emailVerification->Verified) {
+            return "AlreadyVerified";
+        } else {
+            return "Success";
+        }
+    }
+
     public function generateToken() {
         $generator = new RandomGenerator();
         $token = $generator->randomToken('sha512');
