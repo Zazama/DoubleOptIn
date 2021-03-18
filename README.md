@@ -1,6 +1,8 @@
 # DoubleOptIn for Silverstripe
 
-Important: This module is pretty new so expect it to have some bugs.
+![Packagist Version](https://img.shields.io/packagist/v/Zazama/DoubleOptIn?style=flat-square)
+![GitHub](https://img.shields.io/github/license/Zazama/DoubleOptIn?style=flat-square)
+![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/Zazama/DoubleOptIn?style=flat-square)
 
 ## Introduction
 
